@@ -24,6 +24,7 @@
 @implementation DropdownMagnifiedView
 - (void)awakeFromNib {
     self.headerHeight = 250;
+    self.autoresizingMask = UIViewAutoresizingNone;
 }
 - (void)scrollDidScroll:(UIScrollView *)scrollView {
     CGFloat offset_Y = scrollView.contentOffset.y;
