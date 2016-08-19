@@ -18,13 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //先在这里设置headerView,可以不设置.
     [self setupTableHeaderView];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-}
-- (void)viewDidAppear:(BOOL)animated {
-    ///需要在这个地方设置一下.不然会出现headerView盖住前两个cell的问题.
-    [self setupTableHeaderView];
 }
 - (void)setupTableHeaderView {
     self.aView = [[[NSBundle mainBundle] loadNibNamed:@"DropdownMagnifiedView" owner:self options:nil] lastObject];
