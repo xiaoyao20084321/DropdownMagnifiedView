@@ -24,6 +24,7 @@
 @implementation DropdownMagnifiedView
 - (void)awakeFromNib {
     self.headerHeight = 250;
+    ///防止挡住前两条cell
     self.autoresizingMask = UIViewAutoresizingNone;
 }
 - (void)scrollDidScroll:(UIScrollView *)scrollView {
